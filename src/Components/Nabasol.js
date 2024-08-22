@@ -1,31 +1,62 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
+function SimpleForm() {
+  // State to hold the current input values
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  
+  // State to hold the list of submitted values
+  const [submittedData, setSubmittedData] = useState([]);
 
-function Nabasol(){
-
-    const [isArray,setIsArray]= useState(["Initial Value 1","Initial Value 2","Initial Value 3"]);
-return(
-    <>
-
-    <form action="">
-
-        <p> {isArray}</p>
-
-    <label htmlFor="name">Name</label><input type="text" id="idText" /> 
-    <br />
-    <label htmlFor="phone">Number</label><input type="number" name="number" id="idPhone" />
-    <br />
-    <label htmlFor="Email">Email</label><input type="email" name="email" id="idEmail" />
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Add the new data to the list of submitted data
+    setSubmittedData([...submittedData, { name, phone }]);
     
-    <button type="submit">Submit</button>
-    </form>
-    
-    
+    // Clear the input fields after submission
+    setName('');
+    setPhone('');
+  };
 
-    </>
-);
+  return (
+    <div>
+      <h2>Simple Form</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label>
+            Name:
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </label>
+        </div>
+        <div>
+          <label>
+            Phone Number:
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+          </label>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+
+      <h3>Submitted Data</h3>
+      <ul>
+  {submittedData.map((item, index) => (
+    <li key={index}>
+      Name: {item.name}, Phone Number: {item.phone}
+    </li>
+  ))}
+</ul>
 
 
+    </div>
+  );
 }
 
-export default Nabasol;
+export default SimpleForm;
