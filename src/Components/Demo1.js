@@ -19,6 +19,6 @@ function Demo1() {
       <button onClick={() => setIsArray([...isArray, "another element  "])}>Click</button>
     </>
   ); 
-}
+} 
 
 export default Demo1;

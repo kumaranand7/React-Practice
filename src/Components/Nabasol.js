@@ -47,7 +47,7 @@ function SimpleForm() {
 
       <h3>Submitted Data</h3>
       <ul>
-  {submittedData.map((item, index) => (
+  {submittedData.map((item, index) => ( 
     <li key={index}>
       Name: {item.name}, Phone Number: {item.phone}
     </li>
