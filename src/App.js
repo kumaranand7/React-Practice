@@ -3,7 +3,9 @@
 // import Nabaso2 from './Components/Nabaso2';
 // import Nabasol from './Components/Nabasol';
 
-import FetchApi from "./Components/FetchApi";
+import Nabasol3 from "./Components/Nabasol3";
+
+// import FetchApi from "./Components/FetchApi";
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
     {/* <Nabasol> </Nabasol> */}
     {/* <Demo2></Demo2> */}
      {/* <Nabaso2> </Nabaso2> */}
-     <FetchApi> </FetchApi>
+     {/* <FetchApi> </FetchApi> */}
+     <Nabasol3> </Nabasol3>
+
     </>
   );
 }
