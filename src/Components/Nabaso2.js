@@ -17,7 +17,6 @@ function Nabaso2() {
     setPhone(''); // Clear the phone input
     setSubmittedData([]); // Clear the submitted data (optional)
   };
-
   return (
     <>
       <form onSubmit={onFormSubmit}>
@@ -45,8 +44,8 @@ function Nabaso2() {
       </form>
 
       <ul>
-        {submittedData.map((element, index) => (
-          <li key={index}>
+        {submittedData.map((element) => (
+          <li>
             Name: {element.namee}, Phone: {element.phonee}
           </li>
         ))}
