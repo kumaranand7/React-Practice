@@ -3,7 +3,9 @@
 // import Nabaso2 from './Components/Nabaso2';
 // import Nabasol from './Components/Nabasol';
 
-import Inkoop from "./Components/Inkoop";
+import FetchApi2 from "./Components/FetchApi2";
+
+// import Inkoop from "./Components/Inkoop";
 
 // import Nabasol3 from "./Components/Nabasol3";
 
@@ -18,7 +20,8 @@ function App() {
      {/* <Nabaso2> </Nabaso2> */}
      {/* <FetchApi> </FetchApi> */}
      {/* <Nabasol3> </Nabasol3> */}
-     <Inkoop> </Inkoop>
+     {/* <Inkoop> </Inkoop> */}
+     <FetchApi2></FetchApi2>
 
     </>
   );
