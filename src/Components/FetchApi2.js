@@ -1,12 +1,18 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import { useParams } from "react-router-dom";
 
 function FetchApi2() {
     const [names, setNames] = useState([]); // Initialize as an empty array
     const [avatarUrl,setAvtarUrl] =useState([]);
     const[isLoadinf,setIsloading] = useState(true);
     console.log(names);
+    
 
+    //useParams
+
+    const {id} =useParams();
+    console.log(id);
 
     // Function Declaration
     async function fetchApiMethod() {

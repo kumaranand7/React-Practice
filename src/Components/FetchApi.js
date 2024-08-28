@@ -9,16 +9,16 @@ const FetchApi = () => {
 
   useEffect(() => {
     const fetchUserData = async () => {
-    //   try {
+      try {
         const url = "https://randomuser.me/api/?page=1&results=1&werwe=abc";
         const response = await axios.get(url);
         const userData = response.data.results[0];
         setDetails(userData); // Set the user data to state
         setLoading(false); // Set loading to false
-    //   } catch (error) {
-    //     setError(error); // Set error state
-    //     setLoading(false); // Set loading to false
-    //   }
+      } catch (error) {
+        setError(error); // Set error state
+        setLoading(false); // Set loading to false
+      }
     };
 
     fetchUserData(); // Call the fetch function
