@@ -9,7 +9,7 @@ function FetchApi2() {
     console.log(names);
     
 
-    //useParams
+    //useParams 
 
     const {id} =useParams();
     console.log(id);
