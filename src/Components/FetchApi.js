@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import '../index.css';  // Import Tailwind CSS
+
 
 const FetchApi = () => {
   // Define state variables
@@ -30,11 +32,11 @@ const FetchApi = () => {
 
   return (
     <>
-      <h1>User Information</h1>
+      <h1 class="text-4xl font-bold ">User Information</h1>
      
-        <div>
-          <img src={details.picture.large} alt="User" />
-          <p><strong>Name:</strong> {details.name.first} {details.name.last}</p>
+        <div >
+          <img src={details.picture.large} alt="User"/>
+          <p ><strong>Name:</strong> {details.name.first} {details.name.last}</p>
           <p><strong>Gender:</strong> {details.gender}</p>
           <p><strong>Email:</strong> {details.email}</p>
           <p><strong>Phone:</strong> {details.phone}</p>
